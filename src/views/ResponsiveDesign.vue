@@ -49,7 +49,8 @@
     <li><a href="https://internetingishard.com/html-and-css/flexbox/">Flexbox</a>
       provides the ability to control how elements are laid out in one
       direction (horizontally or vertically), with overflow to allow wrapping across
-      multiple rows or columns.</li>
+      multiple rows or columns. <a href="https://mastery.games/p/flexbox-zombies">Flexbox
+        Zombies</a> is an online game/course to learn Flexbox.</li>
 
     <li><a href="https://learncssgrid.com/">Grid</a> provides the ability to
       control how elements are laid out in a two-dimensional grid, with a variety
