@@ -1,93 +1,104 @@
 <template>
-<div>
-  <h1>Color</h1>
+  <div>
+    <h1>Color</h1>
 
-  <p>Color can help establish both the brand and the mood of your website. Often
-    a company or organization will establish a particular color scheme that is
-    recognizeable as connected to their brand over time. Color can also establish
-    mood -- consider the difference between a dark gray versus a bright yellow.</p>
+    <p>
+      Color can help establish both the brand and the mood of your website. Often a company or
+      organization will establish a particular color scheme that is recognizeable as connected to
+      their brand over time. Color can also establish mood -- consider the difference between a dark
+      gray versus a bright yellow.
+    </p>
 
-  <p>Color can often be difficult for beginners to get right. A good way to avoid
-    a bad design is to start with black and white. Then choose 2 or 3 colors to
-    create a style for the website and add them in sparingly. You might, for example,
-    choose a color for a site header, or for text headings or buttons. Shades of
-    gray can also be effective and work with any color.</p>
+    <p>
+      Color can often be difficult for beginners to get right. A good way to avoid a bad design is
+      to start with black and white. Then choose 2 or 3 colors to create a style for the website and
+      add them in sparingly. You might, for example, choose a color for a site header, or for text
+      headings or buttons. Shades of gray can also be effective and work with any color.
+    </p>
 
-  <div class="example-wrapper">
-    <button v-on:click="toggleTP1()" class="pure-button">Toggle Color</button>
-    <div class="example-container">
-
-      <div class="example-header">
-        <p>
-          Example
-        </p>
-      </div>
-      <div v-bind:class="{ tp1: tp1}" class="example">
-        <div class="menu">
-          <ul>
-            <li>Home</li>
-            <li>Clothing</li>
-            <li>Shoes</li>
-            <li>Accessories</li>
-            <li>Cart</li>
-          </ul>
+    <div class="example-wrapper">
+      <button v-on:click="toggleTP1()" class="pure-button">Toggle Color</button>
+      <div class="example-container">
+        <div class="example-header">
+          <p>Example</p>
         </div>
-        <div class="heading">
-          <img class="white" src="/images/child.png">
-          <img class="black" src="/images/child-black.png">
-          Anna's Place
-        </div>
+        <div v-bind:class="{ tp1: tp1 }" class="example">
+          <div class="menu">
+            <ul>
+              <li>Home</li>
+              <li>Clothing</li>
+              <li>Shoes</li>
+              <li>Accessories</li>
+              <li>Cart</li>
+            </ul>
+          </div>
+          <div class="heading">
+            <img class="white" src="/images/child.png" />
+            <img class="black" src="/images/child-black.png" />
+            Anna's Place
+          </div>
 
-        <div class="products">
-          <div class="product">
-            <h2>Fancy Nancy Shoes</h2>
-            <img src="/images/shoes1.jpg">
-          </div>
-          <div class="product">
-            <h2>Denim Jeans Shoes</h2>
-            <img src="/images/shoes2.jpg">
-          </div>
-          <div class="product">
-            <h2>Rocket Dog Shoes</h2>
-            <img src="/images/shoes3.jpg">
+          <div class="products">
+            <div class="product">
+              <h2>Fancy Nancy Shoes</h2>
+              <img src="/images/shoes1.jpg" />
+            </div>
+            <div class="product">
+              <h2>Denim Jeans Shoes</h2>
+              <img src="/images/shoes2.jpg" />
+            </div>
+            <div class="product">
+              <h2>Rocket Dog Shoes</h2>
+              <img src="/images/shoes3.jpg" />
+            </div>
           </div>
         </div>
-
       </div>
     </div>
-  </div>
 
-  <p>The below is a wonderful example taken from <a href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/">an
-      article by Laura Elizabeth in Smashing Magazine</a>:</p>
+    <p>
+      The below is a wonderful example taken from
+      <a href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/"
+        >an article by Laura Elizabeth in Smashing Magazine</a
+      >:
+    </p>
 
-  <div class="example-wrapper">
-    <button v-on:click="toggleTP2()" class="pure-button">Toggle Color</button>
-    <div class="example-container">
-
-      <div class="example-header">
-        <p>
-          Example
-        </p>
-      </div>
-      <div v-bind:class="{ tp2: tp2}" class="example">
-        <div class="examples">
-          <img class="gray" src="/images/color-in-practice-gray.jpg">
-          <img class="color" src="/images/color-in-practice.jpg">
+    <div class="example-wrapper">
+      <button v-on:click="toggleTP2()" class="pure-button">Toggle Color</button>
+      <div class="example-container">
+        <div class="example-header">
+          <p>Example</p>
         </div>
-
+        <div v-bind:class="{ tp2: tp2 }" class="example">
+          <div class="examples">
+            <img class="gray" src="/images/color-in-practice-gray.jpg" />
+            <img class="color" src="/images/color-in-practice.jpg" />
+          </div>
+        </div>
       </div>
     </div>
+
+    <h2>Additional Resoures</h2>
+
+    <ul>
+      <li>
+        <a href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/"
+          >A Simple Web Developer’s Color Guide</a
+        >
+      </li>
+      <li>
+        <a href="https://getflywheel.com/layout/website-color-schemes/"
+          >Website Color Schemes: Theory, practice, and inspiration</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://thenextweb.com/dd/2015/04/07/how-to-create-the-right-emotions-with-color-in-web-design/"
+          >Web design color theory: how to create the right emotions with color in web design</a
+        >
+      </li>
+    </ul>
   </div>
-
-  <h2>Additional Resoures</h2>
-
-  <ul>
-    <li><a href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/">A Simple Web Developer’s Color Guide</a></li>
-    <li><a href="https://getflywheel.com/layout/website-color-schemes/">Website Color Schemes: Theory, practice, and inspiration</a></li>
-    <li><a href="https://thenextweb.com/dd/2015/04/07/how-to-create-the-right-emotions-with-color-in-web-design/">Web design color theory: how to create the right emotions with color in web design</a></li>
-  </ul>
-
-</div>
 </template>
 
 <script>
@@ -103,20 +114,18 @@ export default {
   },
   methods: {
     toggleTP1() {
-      this.tp1 = !this.tp1;
+      this.tp1 = !this.tp1
     },
     toggleTP2() {
-      this.tp2 = !this.tp2;
+      this.tp2 = !this.tp2
     },
     toggleTP3() {
-      this.tp3 = !this.tp3;
+      this.tp3 = !this.tp3
     },
     toggleTP4() {
-      this.tp4 = !this.tp4;
-    },
-
+      this.tp4 = !this.tp4
+    }
   }
-
 }
 </script>
 
@@ -158,7 +167,7 @@ export default {
 }
 
 .example .active {
-  background: #8C2066;
+  background: #8c2066;
 }
 
 .example .heading {
@@ -182,7 +191,6 @@ export default {
   height: 200px;
 }
 
-
 .example .products {
   display: flex;
 }
@@ -204,7 +212,7 @@ export default {
 }
 
 .tp1 .heading {
-  background: #E53E36;
+  background: #e53e36;
   color: white;
 }
 
@@ -219,7 +227,6 @@ export default {
 .example p {
   max-width: 900px !important;
 }
-
 
 .examples img {
   width: 900px;

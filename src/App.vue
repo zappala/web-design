@@ -1,73 +1,83 @@
 <template>
-<div id="app">
-  <div id="layout" :class="{active: activeMenu}">
-    <!-- Menu toggle -->
-    <a @click="toggleMenu()" href="#menu" id="menuLink" class="menu-link" :class="{active: activeMenu}">
-      <!-- Hamburger icon -->
-      <span></span>
-    </a>
+  <div id="app">
+    <div id="layout" :class="{ active: activeMenu }">
+      <!-- Menu toggle -->
+      <a
+        @click="toggleMenu()"
+        href="#menu"
+        id="menuLink"
+        class="menu-link"
+        :class="{ active: activeMenu }"
+      >
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
 
-    <div id="menu" :class="{active: activeMenu}">
-      <div class="pure-menu">
-        <div class="pure-menu-heading">
-          <p>Web Design<br>Principles</p>
+      <div id="menu" :class="{ active: activeMenu }">
+        <div class="pure-menu">
+          <div class="pure-menu-heading">
+            <p>Web Design<br />Principles</p>
+          </div>
+
+          <ul class="pure-menu-list">
+            <li class="pure-menu-item">
+              <router-link class="pure-menu-link" to="/" exact>Home</router-link>
+            </li>
+            <li class="pure-menu-item">
+              <router-link class="pure-menu-link" to="/introduction">Introduction</router-link>
+            </li>
+            <li class="pure-menu-item">
+              <router-link class="pure-menu-link" to="/whitespace">White Space</router-link>
+            </li>
+            <li class="pure-menu-item">
+              <router-link class="pure-menu-link" to="/visualhierarchy"
+                >Visual Hierarchy</router-link
+              >
+            </li>
+            <li class="pure-menu-item">
+              <router-link class="pure-menu-link" to="/typography">Typography</router-link>
+            </li>
+            <li class="pure-menu-item">
+              <router-link class="pure-menu-link" to="/navigation">Navigation</router-link>
+            </li>
+            <li class="pure-menu-item">
+              <router-link class="pure-menu-link" to="/color">Color</router-link>
+            </li>
+            <li class="pure-menu-item">
+              <router-link class="pure-menu-link" to="/alignment">Alignment</router-link>
+            </li>
+            <li class="pure-menu-item">
+              <router-link class="pure-menu-link" to="/responsivedesign"
+                >Responsive Design</router-link
+              >
+            </li>
+            <li class="pure-menu-header">Examples</li>
+            <li class="pure-menu-item">
+              <router-link class="pure-menu-link" to="/atlantic">The Atlantic</router-link>
+            </li>
+          </ul>
         </div>
-
-        <ul class="pure-menu-list">
-          <li class="pure-menu-item">
-            <router-link class="pure-menu-link" to="/" exact>Home</router-link>
-          </li>
-          <li class="pure-menu-item">
-            <router-link class="pure-menu-link" to="/introduction">Introduction</router-link>
-          </li>
-          <li class="pure-menu-item">
-            <router-link class="pure-menu-link" to="/whitespace">White Space</router-link>
-          </li>
-          <li class="pure-menu-item">
-            <router-link class="pure-menu-link" to="/visualhierarchy">Visual Hierarchy</router-link>
-          </li>
-          <li class="pure-menu-item">
-            <router-link class="pure-menu-link" to="/typography">Typography</router-link>
-          </li>
-          <li class="pure-menu-item">
-            <router-link class="pure-menu-link" to="/navigation">Navigation</router-link>
-          </li>
-          <li class="pure-menu-item">
-            <router-link class="pure-menu-link" to="/color">Color</router-link>
-          </li>
-          <li class="pure-menu-item">
-            <router-link class="pure-menu-link" to="/alignment">Alignment</router-link>
-          </li>
-          <li class="pure-menu-item">
-            <router-link class="pure-menu-link" to="/responsivedesign">Responsive Design</router-link>
-          </li>
-          <li class="pure-menu-header">Examples</li>
-          <li class="pure-menu-item">
-            <router-link class="pure-menu-link" to="/atlantic">The Atlantic</router-link>
-          </li>
-        </ul>
       </div>
-    </div>
-    <div id="main">
-      <div id="content">
-        <router-view />
+      <div id="main">
+        <div id="content">
+          <router-view />
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      activeMenu: true,
+      activeMenu: true
     }
   },
   methods: {
     toggleMenu() {
-      this.activeMenu = !this.activeMenu;
-    },
+      this.activeMenu = !this.activeMenu
+    }
   }
 }
 </script>
@@ -91,8 +101,8 @@ body {
 }
 
 /*
-Add transition to containers so they can push in and out.
-*/
+  Add transition to containers so they can push in and out.
+  */
 #layout,
 #menu,
 .menu-link {
@@ -104,8 +114,8 @@ Add transition to containers so they can push in and out.
 }
 
 /*
-This is the parent `<div>` that contains the menu and the content area.
-*/
+  This is the parent `<div>` that contains the menu and the content area.
+  */
 #layout {
   position: relative;
   left: 0;
@@ -122,8 +132,8 @@ This is the parent `<div>` that contains the menu and the content area.
 }
 
 /*
-The content `<div>` is where all your content goes.
-*/
+  The content `<div>` is where all your content goes.
+  */
 .content {
   margin: 0 auto;
   padding: 0 2em;
@@ -159,17 +169,15 @@ The content `<div>` is where all your content goes.
   color: #888;
 }
 
-
-
 /*
-The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
-appears on the left side of the page.
-*/
+  The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
+  appears on the left side of the page.
+  */
 
 #menu {
   margin-left: -150px;
   /* "#menu" width */
-  width: 150px;
+  width: 158px;
   position: fixed;
   top: 0;
   left: 0;
@@ -188,8 +196,8 @@ appears on the left side of the page.
 }
 
 /*
-    All anchors inside the menu should be styled like this.
-    */
+      All anchors inside the menu should be styled like this.
+      */
 #menu a {
   /* color: white; */
   border: none;
@@ -197,8 +205,8 @@ appears on the left side of the page.
 }
 
 /*
-    Remove all background/borders, since we are applying them to #menu.
-    */
+      Remove all background/borders, since we are applying them to #menu.
+      */
 #menu .pure-menu,
 #menu .pure-menu ul {
   border: none;
@@ -206,20 +214,22 @@ appears on the left side of the page.
 }
 
 /*
-    Add that light border to separate items into groups.
-    */
+      Add that light border to separate items into groups.
+      */
 #menu .pure-menu ul,
-#menu .pure-menu .menu-item-divided {}
+#menu .pure-menu .menu-item-divided {
+}
 
 /*
-        Change color of the anchor links on hover/focus.
-        */
+          Change color of the anchor links on hover/focus.
+          */
 #menu .pure-menu li a:hover,
-#menu .pure-menu li a:focus {}
+#menu .pure-menu li a:focus {
+}
 
 /*
-    This styles the selected menu item `<li>`.
-    */
+      This styles the selected menu item `<li>`.
+      */
 #menu .router-link-active,
 #menu .pure-menu-heading {
   background: #1f8dd6;
@@ -232,13 +242,14 @@ appears on the left side of the page.
 }
 
 /*
-        This styles a link within a selected menu item `<li>`.
-        */
-#menu .router-link-active a {}
+          This styles a link within a selected menu item `<li>`.
+          */
+#menu .router-link-active a {
+}
 
 /*
-    This styles the menu heading.
-    */
+      This styles the menu heading.
+      */
 #menu .pure-menu-heading {
   font-size: 110%;
   color: #fff;
@@ -249,14 +260,14 @@ appears on the left side of the page.
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
 
 /*
-The button to open/close the Menu is custom-made and not part of Pure. Here's
-how it works:
-*/
+  The button to open/close the Menu is custom-made and not part of Pure. Here's
+  how it works:
+  */
 
 /*
-`.menu-link` represents the responsive menu toggle that shows/hides on
-small screens.
-*/
+  `.menu-link` represents the responsive menu toggle that shows/hides on
+  small screens.
+  */
 .menu-link {
   position: fixed;
   display: block;
@@ -296,21 +307,19 @@ small screens.
 .menu-link span:after {
   position: absolute;
   margin-top: -0.6em;
-  content: " ";
+  content: ' ';
 }
 
 .menu-link span:after {
   margin-top: 0.6em;
 }
 
-
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
 /*
-Hides the menu at `48em`, but modify this based on your app's needs.
-*/
+  Hides the menu at `48em`, but modify this based on your app's needs.
+  */
 @media (min-width: 48em) {
-
   .header,
   .content {
     padding-left: 2em;
@@ -339,13 +348,12 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 }
 
 @media (max-width: 48em) {
-
   /* Only apply this when the window is small. Otherwise, the following
-    case results in extra padding on the left:
-        * Make the window small.
-        * Tap the menu to trigger the active state.
-        * Make the window large again.
-    */
+      case results in extra padding on the left:
+          * Make the window small.
+          * Tap the menu to trigger the active state.
+          * Make the window large again.
+      */
   #layout.active {
     position: relative;
     left: 150px;
@@ -392,7 +400,8 @@ li {
   margin-bottom: 5px;
 }
 
-.example-container {}
+.example-container {
+}
 
 .example-header {
   background-color: #fff;
@@ -401,14 +410,14 @@ li {
 }
 
 /*
-.example-header p {
-  transform: rotate(-90deg);
-  text-transform: uppercase;
-  position: relative;
-  top: 50px;
-  font-size: 0.8em;
-  letter-spacing: 2px;
-}*/
+  .example-header p {
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    position: relative;
+    top: 50px;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+  }*/
 
 .example-header p {
   font-size: 0.8em;
